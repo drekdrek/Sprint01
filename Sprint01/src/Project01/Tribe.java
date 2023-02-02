@@ -23,7 +23,7 @@ public class Tribe
             if(i % 2 == 0)
                 members.add(new People(nationName, tribeName, PeopleType.warrior, tribeLifePoints / 2));
             else
-                members.add(new People(nationName, tribeName, PeopleType.wizzard, tribeLifePoints / 2));
+                members.add(new People(nationName, tribeName, PeopleType.wizard, tribeLifePoints / 2));
         for(int i = 0; i < members.size(); i++)
             livingMembers.addAll(members);
     }

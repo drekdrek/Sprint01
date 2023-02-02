@@ -3,7 +3,7 @@ package Project01;
 public enum PeopleType
 {
     warrior ("Solder"),
-    wizzard  ("Tricky");
+    wizard  ("Tricky");
 
     private String description;
 

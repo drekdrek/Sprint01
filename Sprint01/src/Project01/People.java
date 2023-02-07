@@ -4,7 +4,7 @@ import Project01.PeopleType;
 
 /**
  *Stores information pertaining to the people of a nation/tribes. Things such as their nation, tribe, description,
- * etc. The values are private and cannot be accessed directly.
+ * etc. The values are private and cannot be accessed directly
  */
 public class People
 {

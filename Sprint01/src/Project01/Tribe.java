@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import Project01.People;
 import Project01.PeopleType;
 
+/**
+ * This class automates the creation and naming of groups of people, storing them in tribes. It also manages the life
+ * status of said people.
+ */
 public class Tribe
 {
     private String nationName;
@@ -14,6 +18,14 @@ public class Tribe
     private ArrayList<People> members = new ArrayList<>();
     private ArrayList<People> livingMembers = new ArrayList<>();
 
+    /**
+     * Makes a new tribe and its people. Every odd person added is a wizard and every even person added is a warrior.
+     * Both types of people have life points equal to the tribe's base life points divided by two. Finally, it adds all
+     * members to the list of living members because they're all alive when the tribe is created.
+     * @param nation, the name of the nation the tribe belongs to
+     * @param tribe, the name of the newly created tribe
+     * @param lifePoints, the base life points of the tribe, used to create the people.
+     */
     public Tribe(String nation, String tribe, int lifePoints)
     {
         nationName = nation;
@@ -28,6 +40,10 @@ public class Tribe
             livingMembers.addAll(members);
     }
 
+    /**
+     * Remakes both the tribe life points and list of living members by looping through the members.
+     * @return the list of the current living members
+     */
     public ArrayList<People> getLivingTribeMembers()
     {
         livingMembers.clear();
@@ -44,6 +60,7 @@ public class Tribe
         //System.out.println(livingMembers);
         return livingMembers;
     }
+    // Commented out because the toString does the same thing
     /*
     public void printMembers()
     {
@@ -71,11 +88,19 @@ public class Tribe
         return tribeLifePoints;
     }
 
+    /**
+     * Returns the tribe name.
+     * @return the name of the tribe as a string
+     */
     public String getTribeName()
     {
         return tribeName;
     }
 
+    /**
+     * Outputs the name of the tribe and all the members of the tribe.
+     * @return a string containing the above information
+     */
     public String toString()
     {
         String result = "\0";

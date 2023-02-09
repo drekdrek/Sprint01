@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import Project01.Tribe;
 import Project01.People;
 
+
 public class Nation
 {
     private int nationLifePoints;
@@ -15,7 +16,13 @@ public class Nation
     private ArrayList<People> population = new ArrayList<>();
     private ArrayList<People> livingPopulation = new ArrayList<>();
 
-
+    /**
+     * The Nation constructor
+     * Creates a nation with a given name and lifePoints
+     * A nation contains 5 Tribes
+     * @param name
+     * @param lifePoints
+     */
     public Nation(String name, int lifePoints)
     {
         nationCount++;
@@ -29,12 +36,19 @@ public class Nation
         livingPopulation.addAll(population);
     }
 
-
+    /**
+     *
+     * @return if the nation is alive
+     */
     public Boolean isNationAlive()
     {
         return (nationLifePoints > 0);
     }
 
+    /**
+     *
+     * @return the population of the nation
+     */
     public ArrayList<People> getNationPopulation()
     {
         nationLifePoints = 0;
@@ -52,13 +66,18 @@ public class Nation
         return livingPopulation;
     }
 
-
+    /**
+     *
+     * @return the name of the nation
+     */
     public String getNationName()
     {
         return nationName;
     }
 
-
+    /**
+     * prints out the status of the tribe
+     */
     public void printTribesStatus()
     {
         for(int tribe = 0; tribe < 1; tribe++)
@@ -75,6 +94,10 @@ public class Nation
         }
     }
 
+    /**
+     *
+     * @return the nation's tribe's statuses
+     */
     public String toString()
     {
         String result = "\0";

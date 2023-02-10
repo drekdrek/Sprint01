@@ -11,6 +11,16 @@ import Project01.PlayGame;
 public class Main {
 
 
+    /**
+     * The main code that takes care of playing the game itself.
+     * Starts the game with 2000 points, and the nations are then created as an array which creates tribes and
+     * by extension, people.
+     * It creates the nations "Minions" and "Idiots" and goes into a for loop for 40 rounds.
+     * Each round prints out what round number it is and plays the game. When a nation is returned as a winner,
+     * it prints out the message "There is a winner!" and hits a break which stops no matter how many rounds have passed.
+     * It then announces the winning nation, printing it out, and ends the code.
+     * @param args
+     */
     public static void main(String[] args)
     {
        int gameLifePoints = 2000;

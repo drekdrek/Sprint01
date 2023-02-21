@@ -5,6 +5,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.*;
 
+/**
+ * This class runs all the overhead operations of playing a game
+ */
 public class PlayGame
 {
 
@@ -12,12 +15,19 @@ public class PlayGame
     ArrayList<People> worldLivingPopulation = new ArrayList<>();
     Random generator;
 
+    /**
+     * Makes a random generator based of the date.
+     */
     public PlayGame()
     {
         Date seed = new Date();
         generator = new Random(seed.getTime());
     }
 
+    /**
+     * updates the current number of people alive
+     * @param nations, the two nations and all their tribes and people
+     */
     public void getWorldLivingPopulation(ArrayList<Nation> nations)
     {
         // add all living people to world list
@@ -30,6 +40,10 @@ public class PlayGame
     }
 
 
+    /**
+     * Updates the list of living nations when a nation no longer has living people.
+     * @param nations, the two nations and all their tribes and people
+     */
     public void getAllLivingNations(ArrayList<Nation> nations)
     {
         getWorldLivingPopulation(nations);
@@ -45,6 +59,12 @@ public class PlayGame
     }
 
 
+    /**
+     * Starts an encounter where p1 and p2 will attack each other if they aren't part of the same nation. Each person
+     * does an average of 5 damage with a range of 1 to 20.
+     * @param p1, Person 1
+     * @param p2, Person 2
+     */
     public void encounter(People p1, People p2)
     {
         // need to fix this to take strategies into account.
@@ -61,8 +81,12 @@ public class PlayGame
     }
 
 
-
-
+    /**
+     * Plays one round of the game. One round consists of encounters between two different people until either the
+     * number of encounter excesses the world living populations or one nation loses all it's people.
+     * @param nations, the two nations and all their tribes and people
+     * @return true if the game has ended, false if the game is continuing.
+     */
     public Boolean playOneRound(ArrayList<Nation> nations)
     {
         getAllLivingNations(nations);
@@ -88,7 +112,10 @@ public class PlayGame
 
     }
 
-
+    /**
+     * Gets the winner of the game
+     * @return No Winner if both nations are dead, otherwise returns the first Nation in the list
+     */
     public String getWinner()
     {
         if (allLivingNations.size() == 0)

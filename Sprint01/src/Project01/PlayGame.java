@@ -16,7 +16,7 @@ public class PlayGame
     Random generator;
 
     /**
-     * Makes a random generator based of the date.
+     * Makes a random generator based on the date.
      */
     public PlayGame()
     {
@@ -25,7 +25,7 @@ public class PlayGame
     }
 
     /**
-     * updates the current number of people alive
+     * Updates the current list of people alive
      * @param nations, the two nations and all their tribes and people
      */
     public void getWorldLivingPopulation(ArrayList<Nation> nations)

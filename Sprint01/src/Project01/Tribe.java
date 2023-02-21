@@ -72,17 +72,29 @@ public class Tribe
 */
 
 
+    /**
+     * returns the amount of living members of the tribe
+     * @return the size of the tribe
+     */
     public int getTribeSize()
     {
         return livingMembers.size();
     }
 
+    /**
+     * returns the current status of the tribe.
+     * @return if the tribe is alive
+     */
     public Boolean isTribeAlive()
     {
         return (tribeLifePoints > 0);
     }
 
 
+    /**
+     * Returns the life points of the tribe
+     * @return the life points as a int
+     */
     public int getTribeLifePoints()
     {
         return tribeLifePoints;
